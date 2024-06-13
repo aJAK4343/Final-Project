@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    /*padding: 0; */
+
+}
+
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background: url('images/fm7.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 40px 0; /* Adjusted to give a larger header block */
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+header .overlay-container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+header .overlay-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+header .small-image {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 25%;
+    height: auto;
+    z-index: 2;
+    background: #fff;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* Announcement block styles */
+.announcement {
+    background: rgb(252, 235, 4);
+    color: #030303;
+    padding: 10px 0; /* 1/4 the padding size of the header block */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Navigation styles */
+nav {
+    width: 50%;
+}
+nav ul {
+    list-style: none;
+    text-align: center;
+    background: #444;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    background: #333;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background: #555;
+}
+
+/* Image grid styles */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+   /* width: auto; */
+    /* margin: 0 auto; */
+}
+
+.image-block {
+    background: teal;
+    /* border: 2px solid rgb(53, 143, 98); */
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    /* padding: 0; */
+    flex-basis: calc(33.333% - 20px); /* Three images per row with some margin */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.image-block img {
+    width: 90%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+video {
+    width: 90%;
+}
+
+/* Main content styles */
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+   
+  .main-content {
+    width: 100%;
+    display: flex;
+    grid-row-gap: 10px;
+    grid-column-gap: 9px;
+  }
+
+  .nav-sections {
+    background-color: yellow; 
+    max-height: 700px;     
+}
+
+.section-text {
+    border: 5px solid red;
+    padding: 10px;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    main {
+        flex-direction: column;
+    }
+
+    .image-grid {
+        width: 100%;
+    }
+
+    .image-block {
+        flex-basis: calc(50% - 20px); /* Two images per row on medium screens */
+    }
+
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .image-block {
+        flex-basis: calc(50% - 10px); /* Two images per row on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 20px 0; /* Adjusted to match 1/4 the padding size on small screens */
+    }
+
+    .announcement {
+        padding: 5px 0; /* Adjusted to match 1/4 the padding size on small screens */
+    }
+
+    nav ul li a {
+        padding: 5px;
+    }
+
+
+    footer {
+        padding: 5px 0;
+    }
+    
+    .image-block {
+        flex-basis: 100%; /* One image per row on very small screens */
+    }
+}
